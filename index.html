@@ -15,15 +15,20 @@
     </style>
   </head>
   <body>
-    <div class="container">
       <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container-fluid">
           <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
             <a class="navbar-brand" href="#">某管理系统</a>
           </div>
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar navbar-inverse">
-              <li><a href="#">首页</a></li>
+          <div class="collapse navbar-collapse" id="navbar">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#">首页</a></li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">功能 <span class="caret"></span></a>
                 <ul class="dropdown-menu">
@@ -43,13 +48,14 @@
                 <input type="text" class="form-control" placeholder="用户名...">
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="密码...">
+                <input type="password" class="form-control" placeholder="密码...">
               </div>
               <button type="submit" class="btn btn-default">登录</button>
             </form>
           </div>
         </div>
       </nav>
+    <div class="container-fluid">
 <div class="col-sm-3 col-md-2 sidebar hidden-xs">
           <ul class="nav nav-sidebar">
             <li class="active"><a href="#">首页 <span class="sr-only">(current)</span></a></li>
@@ -67,46 +73,38 @@
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
           <h1 class="page-header">管理控制台</h1>
           <p>
-          <button type="button" class="btn btn-default" btn-lg>操作1</button>
-          <button type="button" class="btn btn-primary" btn-lg>操作2</button>
-          <button type="button" class="btn btn-success" btn-lg>操作3</button>
-          <button type="button" class="btn btn-info" btn-lg>操作4</button>
-          <button type="button" class="btn btn-warning" btn-lg>操作5</button>
-          <button type="button" class="btn btn-danger" btn-lg>操作6</button>
+          <button type="button" class="btn btn-default btn-lg">操作1</button>
+          <button type="button" class="btn btn-primary btn-lg">操作2</button>
+          <button type="button" class="btn btn-success btn-lg">操作3</button>
+          <button type="button" class="btn btn-info btn-lg">操作4</button>
+          <button type="button" class="btn btn-warning btn-lg">操作5</button>
+          <button type="button" class="btn btn-danger btn-lg">操作6</button>
         </p>
-        </div>
   <div class="row">
-     <div class="col-xs-6 col-md-6">
+     <div class="col-md-6">
       <div class="panel panel-primary">
         <div class="panel-heading">最新提醒</div>
         <div class="panel-body">
-          <div class="alert alert-success" role="alert">提示 您的订单（2014001）已经审批通过！</div>
-          <div class="alert alert-danger" role="alert">提示 您的订单（2014002）被打回！</div>
-          <div class="alert alert-warning" role="alert">提示 您的订单（2013001）客户付款延迟！</div>
+          <div class="alert alert-success" role="alert"><strong>提示 </strong>您的订单（2014001）已经审批通过！</div>
+          <div class="alert alert-danger" role="alert"><strong>提示 </strong>您的订单（2014002）被打回！</div>
+          <div class="alert alert-warning" role="alert"><strong>提示 </strong> 您的订单（2013001）客户付款延迟！</div>
         </div>
       </div>
     </div>
-    <div class="col-xs-6 col-md-6">
+    <div class="col-md-6">
       <div class="pane1 panel-primary">
         <div class="panel-heading">我的任务</div>
         <div class="panel-body">
-            <ul class="list-group ">
-                          <li class="list-group-item list-group-item-info">
-                            <span class="badge">42</span>
-                            订单审批
+            <ul class="nav nav-pills nav-stacked" role="tablist">
+                          <li role="presentation">
+                            <a class="alert alert-info" href="#">订单审批<span class="badge pull-right">42</span></a>
                           </li>
-                        </ul>
-                        <ul class="list-group ">
-                          <li class="list-group-item list-group-item-info">
-                            <span class="badge">20</span>
-                            收款确认
+                          <li role="presentation">
+                            <a class="alert alert-info" href="#">收款确认<span class="badge pull-right">20</span></a>
                           </li>
-                        </ul>
-                          <ul class="list-group ">
-                            <li class="list-group-item list-group-item-info">
-                              <span class="badge">10</span>
-                              付款确认
-                            </li>
+                          <li role="presentation">
+                            <a class="alert alert-info" href="#">付款确认<span class="badge pull-right">10</span></a>
+                          </li>
                           </ul>
                       </div>
                     </div>
@@ -114,7 +112,7 @@
         </div>
       <!-- </div> -->
     <div class="row">
-     <div class="col-xs-6 col-md-6">
+     <div class="col-md-6">
       <div class="panel panel-primary">
         <div class="panel-heading">最新订单</div>
         <div class="panel-body">
@@ -152,15 +150,16 @@
               </tr>
             </tbody>
           </table>
-          <button type="button" class="btn btn-primary">查看详细>></button>
+          <button type="button" class="btn btn-primary">查看详细<span aria-hidden="true">&raquo;</span>
+</button>
         </div>
       </div>
-     </div>
-    <div class="col-xs-6 col-md-6">
+      </div>
+    <div class="col-md-6">
       <div class="pane1 panel-primary">
         <div class="panel-heading">工程进度</div>
         <div class="panel-body">
-         <h3> <span class="label label-primary">水晶挖掘工程</span></h3>
+         <h3> <span class="label label-primary">水井挖掘工程</span></h3>
           <div class="progress">
             <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
             </div>
@@ -173,9 +172,9 @@
         </div>
       </div>
     </div>
+     </div>
     </div>
   </div>
-
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
 <!-- </div> -->
