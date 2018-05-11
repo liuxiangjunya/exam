@@ -29,13 +29,13 @@
   color: #fff;
   background-color: #428bca;
 }
-.col-md-offset-2{
-  margin-left: 165px;  
-} 
-.row{
+/* .col-md-offset-2{
+  margin-left:-10px;  
+} */
+/* .row{
   margin-top: 20px;
   margin-left: 160px;
-}
+} */
 .panel-body{
   margin-top: -4px;
   background-color: #fff;
@@ -44,7 +44,7 @@
   -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
   box-shadow: 0 1px 1px rgba(0,0,0,.05);
 }
-.panel-default > .panel-heading {
+.panel-default .panel-heading {
   background-color: #428BCA;
 }
 .progress {
